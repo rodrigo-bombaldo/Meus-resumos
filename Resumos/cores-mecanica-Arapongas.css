@@ -1,0 +1,278 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Variáveis de Cores (Paleta moderna e profissional) */
+:root {
+    --primary-blue: #2c3e50;    /* Azul Escuro Quase Preto - Confiança */
+    --secondary-orange: #e67e22; /* Laranja Vibrante - Energia/Destaque */
+    --light-grey: #ecf0f1;      /* Cinza Claro - Fundo clean */
+    --dark-grey: #7f8c8d;       /* Cinza para textos secundários */
+    --white: #ffffff;
+    --text-color: #34495e;      /* Azul acinzentado para textos */
+}
+
+/* Reset Básico para consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-grey);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho (Header) */
+header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 15px 0;
+    border-bottom: 5px solid var(--secondary-orange);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsividade em telas menores */
+}
+
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+.logo p {
+    font-size: 0.9em;
+    color: var(--dark-grey);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-orange);
+}
+
+/* Seção Hero (Banner Principal) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x600/2c3e50/ecf0f1?text=Imagem+da+Oficina+ou+Carro') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn-whatsapp {
+    background-color: #25D366; /* Verde WhatsApp */
+    color: var(--white);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Para alinhar o ícone */
+}
+
+.btn-whatsapp:hover {
+    background-color: #1DA851;
+}
+
+.btn-whatsapp i {
+    margin-left: 10px;
+}
+
+/* Seções Gerais */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section:nth-child(even) { /* Cores alternadas para seções */
+    background-color: var(--white);
+}
+
+section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+}
+
+/* Seção de Serviços */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item i {
+    font-size: 3em;
+    color: var(--secondary-orange);
+    margin-bottom: 20px;
+}
+
+.service-item h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.service-item ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.service-item ul li {
+    font-size: 0.95em;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.btn-detalhe {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detalhe:hover {
+    background-color: var(--secondary-orange);
+}
+
+/* Seção Sobre Nós */
+.about p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Seção de Contato */
+.contact-info {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: var(--secondary-orange);
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    color: var(--primary-blue);
+}
+
+.map-container {
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que o iframe não vaze */
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade Básica (para telas menores) */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.8em;
+    }
+
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+}
